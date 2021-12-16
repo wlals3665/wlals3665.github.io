@@ -30,4 +30,7 @@ title을 jimin's Blog로 바꾸고 email또한 입력했다. 정상적으로 바
 
 # 네번째 수업시간 #
 Disqus 홈페이지에 가입하여 블로그에 댓글기능을 추가할 수 있었다. 나는 comment 정책을 조금 더 완화하게 하기 위해서 Balanced 정책을 선택했다. 
-https://blog.naver.com/prt1004dms/221451802933
+사이트의 favicon을 추가했다. https://blog.naver.com/prt1004dms/221451802933 블로그를 참조하였다. assets 폴더 안에 logo.ico란 폴더를 만든 후 파비콘 zip파일의 압축을 풀어주었다.
+그 후 includes파일의 head.html을 수정하였다.
+
+
