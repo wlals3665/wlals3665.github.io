@@ -30,3 +30,4 @@ title을 jimin's Blog로 바꾸고 email또한 입력했다. 정상적으로 바
 
 # 네번째 수업시간 #
 Disqus 홈페이지에 가입하여 블로그에 댓글기능을 추가할 수 있었다. 나는 comment 정책을 조금 더 완화하게 하기 위해서 Balanced 정책을 선택했다. 
+https://blog.naver.com/prt1004dms/221451802933
