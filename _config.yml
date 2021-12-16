@@ -1,9 +1,9 @@
-title: 20213001 Jimin Blog
+title: Jimin's  Blog
 logo_img: "assets/mu.png"
 favicon: "assets/favicon.ico"
-description: description
+description: 20213001 Parkjimin
 global_tags: jekyll theme simplex golasblog responsive html5
-copyright: © Golasowski 2021
+copyright:  2021
 
 sass:
     style: compressed
