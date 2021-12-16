@@ -1,239 +1,32 @@
-[![Blog Demo](https://img.shields.io/badge/demo-golasblog-blue?style=flat-square)](https://golas.blog/)
-[![Generic Demo](https://img.shields.io/badge/demo-generic-green?style=flat-square)](https://simplex-demo.golas.systems/)
+# 첫번째 수업시간 
+git에 branch를 생성하고 터미널에서 작업중인 branch를 전환,merge, 또한 -d를 통하여 삭제하는 방법 또한 알아볼 수 있었다.
+github을 이번강의를 통해 사용하게 되면서 다시끔 github의 장점을 느끼게 되었다. 
+local저장소(개인 컴퓨터)에 바뀐 내역들을 remote저장소(github)에 저장함을 통해 내가 바꾸기전 파일들의 상태를 다시 확인할 수 있어서 편리했다.
+Markdown이라는 텍스트 편집기와 그것의 문법에 대해서도 알 수 있었다.
+Markdown의 문법(나는 주로 Header, Italic, Bold를 사용했다)을 익히고 이를 활용하여 텍스트를 작성함으로써 가독성을 높일 수 있었다.
+수업이후 Markdown을 활용하여 첫번째 블로그 포스트(About Topic)를 작성하는 assing1을 하였다.
 
-The source of the generic demo is available here: https://github.com/andreondra/simplex-demo
+# 두번째 수업시간 
+Repository를 생성하여 remote하였다. 
+예시문서(index.html)를 작성하고 git staus,add commit-m "msg"로 커밋남기고 git branch -M main으로 현재 branch의 이름을 main으로 변경하였다.
+이때 git push를 해주기 위해 Personal Access Token(PAT)를 생성하였다. 토큰의 유효기간이 최소 30일이라는것과 한번 잊어먹으면 다시 만들어야한다는 강의를 듣고 보안이 철저하다고 느꼈다.
+이렇게 작성한 예시문서(index.html)은 이후 나에게 블로그를 만드는데 큰 걸림돌이 되었다.
+index.html이 삭제되지 않아 나의 github page인 https://wlals3665.github.io/ 에 자꾸 index.html의 텍스트(This is test page.)만 뜨게되어 결국 repository를 삭제하고 다시 만들게 되었다.
+(다시 만들때에는 index.html 실습을 생략했다)
+다음 수업시간을 위해 jekyll 홈페이지에 들어가 설치방법을 읽은 후 설치하였다.\
 
-# <img src="assets/img/icons/simplex_logo.svg" alt="Simplex" height="50"/>
+# 세번째 수업시간 
+Jekyll을 본격적으로 사용하고, 실습이 늘어나게 되었다.
+jekyll가 잘 설치 되어있는지 jekyll -v를 통해 확인할 수 있었다.
+나는 현재 디렉토리에 jekyll이 설치가 안되어서 Eureka라는 디렉토리에 설치를 하였다. 
+bundle exec jekyll serve를 실행하여 local host에 접속했을 때 jekyll사이트가 정상적으로 뜨는것을 보고 뿌듯했다.
+config.yml 파일의 역할과 중요성의 대해서 알 수 있었다. 실제로 실습에서 이 파일을 수정하고 추가하는 경우가 많았다. 
+title을 jimin's Blog로 바꾸고 email또한 입력했다. 정상적으로 바뀐후 원격저장소에 remote하여 나의 github page인 https://wlals3665.github.io/에 반영될수 있도록 하였다.
+(이때, 위에 말했다 싶이 index.html의 텍스트만이 계속 떠서 repository를 재생성하였다.)
+첫번째 수업시간에 assign으로 작성한 About Topic에 대한 문서를 업로드하였다.
+마지막으로 나에게 맞는 테마를 찾아 블로그에 적용해보았다. 나는 깔끔한 느낌을 선호하기 때문에 simplex라는 테마를 적용하였다.
+이후 시간관계상 테마를 적용하는 방법을 많이 생략하셨는데 나는 https://zeddios.tistory.com/1223 이 블로그를 참조하여 쉽게 적용할 수있었다.
+블로그 log에는 내가 좋아하는 유튜버(hahaha)의 고양이인 무를 넣었다. 로고가 작게 나와 아쉬웠다. 후에 크게 적용할 수 있는 법을 알아볼 예정이다.
 
-A *simple* yet neat blogging theme. Developed for the [golas blog](https://golas.blog/) project.
-
-
-## 👓 Preview
-![Preview](preview.gif)
-
-## 💎 Features
-### Responsive
-![Responsivity preview](previewResponsive.gif)
-
-### Dark mode
-![Dark mode preview](previewDark.gif)
-
-### Buttons
-![Buttons preview](previewButtons.png)
-
-### Lity Lightbox 
-Supports images, videos, iFrames and more. See below for syntax.
-
-### Open Graph tags
-
-## ℹ Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "jekyll-theme-simplex"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: jekyll-theme-simplex
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-theme-simplex
-
-## ✔ Usage
-
-### ⚙ Setting up the template
-Add following to the `_config.yml`:
-```yaml
-logo_img: /assets/img/icons/golasblog_logo.svg #Absolute path to the logo. If not specified, the title will be displayed instead.
-copyright: © Golasowski 2020 #Your copyright.
-
-collections:
-    category:
-        output: true
-    authors:
-        output: false
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "category"
-```
-
-### ✨ Defining categories
-Create a `_category` folder in the root directory of the blog. Create a `.md` file for every category with the contents:
-```
----
-category: [design] #Category ID.
-hue: var(--c-themeHueOrange) #Category hue. See note [1].
-title: Design #Category title.
-description: Lorem ipsum dolor sit amet.
----
-```
-
-### 🤵 Defining authors
-Create a `_authors` folder in the root directory. Create a `.md` file for every author with the contents:
-```
----
-nick: golas #Author's nick.
-full_name: Andrew Golasowski #Author's full name.
-photo_dir: assets/img/authors/golas.png #Path to the author's pic.
----
-```
-
-### 📰 Defining the menu
-Create a `_data` folder in the root directory. In the folder, create a `nav.yaml` file. Here's an example:
-```yaml
-- title: Programming #Menu item title.
-  url: category/programming.html #Menu item url.
-  icon: assets/img/icons/programming.svg #Menu item icon.
-  hue: "var(--c-themeHueRed)" #Menu item hue - see note [1].
-  subnav: #Subnav. See note [2].
-      - title: C++ #Submenu item title.
-        url: category/cpp.html #Submenu item url.
-        hue: "var(--c-themeHueOrange)" #Submenu item hue.
-        subnav: #Another subnav
-            - title: Libraries
-              url: libs.html
-              hue: "var(--c-themeHueBlue)"
-- title: Design
-  url: category/design.html
-  icon: assets/img/icons/design.svg
-  hue: "var(--c-themeHueRed)"
-```
-#### Pro tip:
-Use color icons with the same hue as the menu items. Icons will be black and on hover the color will be shown.
-
-### ✒ Creating posts
-Posts are created in the `_posts` directory. Following front matter attributes are supported:
-```
----
-layout: post #Do not change.
-category: [programming, testing] #One, more categories or no at all.
-title: "Lorem ipsum" #Article title.
-author: andy #Author's nick.
-nextPart: _posts/2021-01-30-example.md #Next part.
-prevPart: _posts/2021-01-30-example.md #Previous part.
-og_image: assets/example.png #Open Graph preview image.
-og_description: "Example description." #Open Graph description.
-fb_app_id: example
----
-Your markdown content here.
-```
-
-### ⚡ Syntax highlighting
-The theme uses Pygments CSS created by [@richleland](https://github.com/richleland). If you want to modify the highlighting styles, just download different CSS or create your own - see [Jekyll docs](https://jekyllrb.com/docs/liquid/tags/#stylesheets-for-syntax-highlighting).
-
-Note - `@media` is used to manage different styles for light and dark web browser mode. See `_variables.scss` file for details.
-
-### 📷 Inserting pictures
-Classic Markdown syntax is supported. However, to be able to use the lightbox feature, you have to use HTML syntax. Minimal example:
-```html
-<a href="/assets/example.jpg" data-lity>
-  <img src="/assets/example_thumbnail.jpg"/>
-</a>
-```
-
-To provide image description use this syntax:
-```html
-<div class="sx-picture">
-  <a href="/assets/example.jpg" data-lity>
-    <img src="/assets/example_thumbnail.jpg"/>
-  </a>
-  <span class="sx-subtitle">My picture description.</span>
-</div>
-```
-
-**Do not forget the `data-lity` attribute.**
-
-#### ↔ Centering
-To center pictures, put the code inside a `div` with `sx-center` class like this:
-```html
-<div markdown=1 class="sx-center">
-  ![My picture](/assets/example.jpg)
-</div>
-```
-
-### 🔘 Buttons
-Buttons can be inserted with the following syntax. Just replace `theme` with `red`, `green`, `blue`, `orange`, `purple` or `brown`, specify the target link in `href` attribute and the icon in `src` attribute.
-```html
-<div class='sx-button'>
-  <a href='https://your.link.here.example.com/' class='sx-button__content theme'>
-    <img src='/assets/img/icons/example_icon.svg'/>#{text}
-  </a>
-</div>
-```
-
-Markdown attribute can be omitted if you don't use markdown inside the block (e.g. by using the lightbox syntax).
-
-### ℹ Notes
-[1] Hue can be either one of the predefined colors or any of the CSS `color` attribute supported values (hex, rgb...).
-
-[2] Submenus are generated recursively, so any menu (and submenu) can have its own submenu.
-
-#### Predefined colors
-You can use following predefined colors:
-```scss
---c-themePrimaryLight: #EFEFEF;
---c-themePrimaryDark:  #101010;
---c-themeSecondaryLight: #DADADA;
---c-themeSecondaryDark: #252525;
---c-themeTerniaryLight: #AEAEAE;
---c-themeTerniaryDark: #515151;
---c-themeQuaternaryLight: #919191;
---c-themeQuaternaryDark: #888888;
-
---c-themeHueRed: #C02717;
---c-themeHueGreen: #8EA604;
---c-themeHueBlue: #2E86AB;
---c-themeHueOrange: #E59500;
---c-themeHuePurple: #9F00CE;
---c-themeHueBrown: #230007;
-```
-These colors are CSS variables, usage: `var(--var-name)`
-
-## Add-ons
-Add-ons are distributed as Jekyll plugins. Just download any desired `.rb` file from the repository `_plugin` folder and put it in your `_plugin` folder.
-
-### Buttons (button.rb)
-Adds a tag to simplify insertion of buttons:
-```
-{% button red|https://www.example.com/|/assets/img/icons/cog.svg %}
-Download binary
-{% endbutton %}
-```
-
-## 🤝 Contributing
- 
-Bug reports and pull requests are welcome on [GitHub](https://github.com/andreondra/jekyll-theme-simplex).
-
-## ⚙ Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-simplex.gemspec` accordingly.
-
-## Credits
-Includes icons by [uxwing](https://uxwing.com/).
-
-The lightbox feature is provided by [Lity](https://github.com/jsor/lity) licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-Uses [jQuery](https://github.com/jquery/jquery) JavaScript plugin licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-## ⚖ License
-© Ondrej Golasowski. The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
+# 네번째 수업시간 #
+Disqus 홈페이지에 가입하여 블로그에 댓글기능을 추가할 수 있었다. 나는 comment 정책을 조금 더 완화하게 하기 위해서 Balanced 정책을 선택했다. 
