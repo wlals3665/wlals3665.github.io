@@ -1,3 +1,11 @@
+---
+layout: post
+title : "AboutTopic"
+date : 2021-11-11
+categories : jekyll update
+comments: True
+---
+
 # TOPIC 1 : Git & Github
 I can learn why Git and Github are generally used for people. 
 Initially I couldn't use Git very well As It was somewhat strange  to me.

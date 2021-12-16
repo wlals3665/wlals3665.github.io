@@ -21,3 +21,8 @@ defaults:
       type: category
     values:
       layout: "category"
+
+comment:
+   provider:    "disqus"
+   disqus:
+     shortname:   "wlals3665"
