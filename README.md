@@ -13,7 +13,7 @@ Repository를 생성하여 remote하였다.
 이렇게 작성한 예시문서(index.html)은 이후 나에게 블로그를 만드는데 큰 걸림돌이 되었다.
 index.html이 삭제되지 않아 나의 github page인 https://wlals3665.github.io/ 에 자꾸 index.html의 텍스트(This is test page.)만 뜨게되어 결국 repository를 삭제하고 다시 만들게 되었다.
 (다시 만들때에는 index.html 실습을 생략했다)
-다음 수업시간을 위해 jekyll 홈페이지에 들어가 설치방법을 읽은 후 설치하였다.\
+다음 수업시간을 위해 jekyll 홈페이지에 들어가 설치방법을 읽은 후 설치하였다.
 
 # 세번째 수업시간 
 Jekyll을 본격적으로 사용하고, 실습이 늘어나게 되었다.
